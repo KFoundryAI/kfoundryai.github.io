@@ -9,5 +9,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/kfoundry-website/' // Replace with your repository name
+  // Since this is an organization page (kfoundryai.github.io), 
+  // we use "/" instead of a subdirectory
+  base: '/'
 })

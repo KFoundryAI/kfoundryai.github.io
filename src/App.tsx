@@ -1,5 +1,12 @@
 import React from 'react';
-import { Search, Menu, Lightbulb, Rocket, TrendingUp, ArrowRight, CheckCircle, Users } from 'lucide-react';
+import { Search, Menu, Lightbulb, Rocket, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 const Navbar = () => (
   <nav className="flex justify-between items-center py-4 px-6 border-b bg-white sticky top-0 z-50">
@@ -7,7 +14,6 @@ const Navbar = () => (
     <div className="hidden md:flex items-center space-x-8">
       <a href="#" className="text-gray-600 hover:text-blue-600">Solutions</a>
       <a href="#" className="text-gray-600 hover:text-blue-600">About Us</a>
-      {/* <a href="#" className="text-gray-600 hover:text-blue-600">Case Studies</a> */}
       <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
         Get Started
       </button>
@@ -18,14 +24,6 @@ const Navbar = () => (
     </div>
   </nav>
 );
-
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
 
 const Hero = () => (
   <div className="relative bg-gradient-to-b from-blue-50 to-white">
@@ -56,22 +54,6 @@ const Hero = () => (
             </DialogContent>
           </Dialog>
         </div>
-        {/* Metrics section commented out until case studies are ready
-        <div className="flex justify-center items-center space-x-8 pt-8">
-          <div className="flex flex-col items-center">
-            <span className="font-bold text-2xl text-blue-600">90%</span>
-            <span className="text-sm text-gray-600">Cost Reduction</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="font-bold text-2xl text-blue-600">6 Weeks</span>
-            <span className="text-sm text-gray-600">To Production</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="font-bold text-2xl text-blue-600">100+</span>
-            <span className="text-sm text-gray-600">Projects Delivered</span>
-          </div>
-        </div>
-        */}
       </div>
     </div>
   </div>
@@ -189,7 +171,6 @@ const Footer = () => (
           <h4 className="text-sm font-semibold mb-4">Company</h4>
           <ul className="space-y-2 text-gray-400 text-sm">
             <li><a href="#" className="hover:text-white">About Us</a></li>
-            {/* <li><a href="#" className="hover:text-white">Case Studies</a></li> */}
             <li><a href="#" className="hover:text-white">Contact</a></li>
           </ul>
         </div>
@@ -198,7 +179,6 @@ const Footer = () => (
           <ul className="space-y-2 text-gray-400 text-sm">
             <li><a href="#" className="hover:text-white">LinkedIn</a></li>
             <li><a href="#" className="hover:text-white">Twitter</a></li>
-            <li><a href="#" className="hover:text-white">Blog</a></li>
           </ul>
         </div>
       </div>
@@ -214,7 +194,7 @@ const Footer = () => (
   </footer>
 );
 
-const LandingPage = () => (
+const App = () => (
   <div className="min-h-screen flex flex-col">
     <Navbar />
     <main className="flex-grow">
@@ -226,4 +206,4 @@ const LandingPage = () => (
   </div>
 );
 
-export default LandingPage;
+export default App;
