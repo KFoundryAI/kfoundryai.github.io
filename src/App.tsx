@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, Menu, Lightbulb, Rocket, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import type { LucideProps } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -59,7 +60,13 @@ const Hero = () => (
   </div>
 );
 
-const QuestionCard = ({ icon: Icon, question, answer }) => (
+interface QuestionCardProps {
+  icon: React.ComponentType<LucideProps>;
+  question: string;
+  answer: string;
+}
+
+const QuestionCard = ({ icon: Icon, question, answer }: QuestionCardProps) => (
   <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col space-y-4 border border-gray-100">
     <div className="flex items-center space-x-4">
       <div className="bg-blue-100 p-3 rounded-full">
@@ -103,7 +110,7 @@ const AIQuestions = () => {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">Your Path to AI Success</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          We've simplified the journey to implementing AI in your business. Start with these key questions and discover how we can help you succeed.
+          We've simplified AI implementation to deliver real business value. Start with our 90-minute workshop and see results in weeks, not months.
         </p>
       </div>
       <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
